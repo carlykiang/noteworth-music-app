@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/teal_background"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="118dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="118dp"
+                    android:layout_marginRight="118dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="METRONOME"
+                    android:textColor="#D9E8FF"
+                    android:textSize="30sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="298dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="79dp"
+                    android:layout_marginEnd="67dp"
+                    android:layout_marginRight="67dp"
+                    android:layout_marginBottom="480dp"
+                    android:background="#CDE2FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginEnd="197dp"
+                    android:layout_marginRight="197dp"
+                    android:layout_marginBottom="536dp"
+                    android:text="Select the tempo"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select the Italian term"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.282" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="298dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="209dp"
+                    android:layout_marginEnd="66dp"
+                    android:layout_marginRight="66dp"
+                    android:layout_marginBottom="350dp"
+                    android:background="#CDE2FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

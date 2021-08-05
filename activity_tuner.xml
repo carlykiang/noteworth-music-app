@@ -1,0 +1,184 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/purple_background"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="146dp"
+                    android:layout_marginLeft="146dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="168dp"
+                    android:layout_marginRight="168dp"
+                    android:layout_marginBottom="38dp"
+                    android:text="TUNER"
+                    android:textColor="#D9E8FF"
+                    android:textSize="40sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginLeft="76dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="77dp"
+                    android:layout_marginRight="77dp"
+                    android:layout_marginBottom="538dp"
+                    android:text="SELECT THE NOTE TO TUNE"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Button
+                    android:id="@+id/button_eString"
+                    android:onClick="playSound"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginBottom="439dp"
+                    android:background="@drawable/purple"
+                    android:text="E STRING"
+                    android:textColor="#D9E8FF"
+                    android:textSize="27sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_aString"
+                    android:onClick="playSound"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="186dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginBottom="336dp"
+                    android:background="@drawable/purple"
+                    android:text="A STRING"
+                    android:textColor="#D9E8FF"
+                    android:textSize="27sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_gString"
+                    android:onClick="playSound"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="386dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginBottom="136dp"
+                    android:background="@drawable/purple"
+                    android:text="G STRING"
+                    android:textColor="#D9E8FF"
+                    android:textSize="27sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_dString"
+                    android:onClick="playSound"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="286dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginBottom="236dp"
+                    android:background="@drawable/purple"
+                    android:text="D STRING"
+                    android:textColor="#D9E8FF"
+                    android:textSize="27sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_cString"
+                    android:onClick="playSound"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="480dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@drawable/purple"
+                    android:text="C STRING"
+                    android:textColor="#D9E8FF"
+                    android:textSize="27sp"
+                    app:fontFamily="@font/chivo_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
