@@ -4,23 +4,81 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.AudioAttributes;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class TunerActivity extends AppCompatActivity {
 
-    private SoundPool soundPool;
-    private int eString, aString, dString, gString, cString;
+    //private SoundPool soundPool;
+    //private int eString, aString, dString, gString, cString;
+
+    Button eString;
+    Button aString;
+    Button dString;
+    Button gString;
+    Button cString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuner);
 
-        //creating the soundPool
+        eString = (Button) findViewById(R.id.button_eString);
+        aString = (Button) findViewById(R.id.button_aString);
+        dString = (Button) findViewById(R.id.button_dString);
+        gString = (Button) findViewById(R.id.button_gString);
+        cString = (Button) findViewById(R.id.button_cString);
 
+        final MediaPlayer playEString = MediaPlayer.create(this, R.raw.estring);
+        eString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playEString.start();
+            }
+        });
+
+        final MediaPlayer playAString = MediaPlayer.create(this, R.raw.astring);
+        aString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAString.start();
+            }
+        });
+
+        final MediaPlayer playDString = MediaPlayer.create(this, R.raw.dstring);
+        dString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playDString.start();
+            }
+        });
+
+        final MediaPlayer playGString = MediaPlayer.create(this, R.raw.gstring);
+        gString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playGString.start();
+            }
+        });
+
+        final MediaPlayer playCString = MediaPlayer.create(this, R.raw.cstring);
+        cString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playCString.start();
+            }
+        });
+
+
+
+
+
+        //creating the soundPool
+/*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -71,7 +129,7 @@ public class TunerActivity extends AppCompatActivity {
                 break;
 
         }
-    }
+    }*/
 
 
     /*
@@ -83,4 +141,5 @@ public class TunerActivity extends AppCompatActivity {
         soundPool = null;
     }*/
 
+    }
 }

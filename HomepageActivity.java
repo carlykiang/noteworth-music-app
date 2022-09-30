@@ -2,30 +2,27 @@ package com.example.musicappcsia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class HomepageActivity extends AppCompatActivity {
 
-/*
-List of Homepage Buttons
-1. Schedule: Button 10
-2. Metronome: Button 11
-3. Tuner: Button 12
-4. Homework: Button 13
-5. Practice Exercises: Button 14
-
-
-
- */
     //create variables for buttons
-    private Button btn_schedule;
+    private Button btn_hw;
     private Button btn_metronome;
     private Button btn_tuner;
-    private Button btn_homework;
-    private Button btn_musicexercises;
+    private Button btn_student_logout;
+    private Button btn_student_scoreboard;
 
     public void openScheduleActivity() {
         Intent scheduleIntent = new Intent(this, ScheduleActivity.class);
@@ -43,32 +40,65 @@ List of Homepage Buttons
     }
 
     public void openHomeworkActivity() {
-        Intent scheduleIntent = new Intent(this, HomeworkActivity.class);
+        Intent scheduleIntent = new Intent(this, StudentPastHWProgressActivity.class);
         startActivity(scheduleIntent);
     }
 
-    public void openMusicExercisesActivity() {
-        Intent scheduleIntent = new Intent(this, MusicExercisesActivity.class);
+    public void openScoreBoardActivity() {
+        Intent scheduleIntent = new Intent(this, StudentScoreboardActivity.class);
+        startActivity(scheduleIntent);
+    }
+
+    public void openLoginActivity() {
+        Intent scheduleIntent = new Intent(this, LoginActivity.class);
         startActivity(scheduleIntent);
     }
 
 
+    private String readFromFile(Context context) {
+        String ret = "";
+        try {
+            InputStream inputStream = context.openFileInput("user_id.txt");
+
+            if ( inputStream != null ) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String receiveString = "";
+                StringBuilder stringBuilder = new StringBuilder();
+
+                while ( (receiveString = bufferedReader.readLine()) != null ) {
+                    stringBuilder.append("\n").append(receiveString);
+                }
+
+                inputStream.close();
+                ret = stringBuilder.toString();
+            }
+        }
+        catch (FileNotFoundException e) {
+            Log.e("MyException", "File not found: " + e.toString());
+        } catch (IOException e) {
+            Log.e("MyException", "Can not read file: " + e.toString());
+        }
+        return ret;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-
+        String user_id = readFromFile(HomepageActivity.this);
+        user_id = user_id.trim();
+        Log.d("mytest","user_id="+user_id);
         //initialize buttons, cast it to Button
-        btn_schedule = (Button) findViewById(R.id.button10);
-        btn_schedule.setOnClickListener(new View.OnClickListener() {
+        btn_hw = (Button) findViewById(R.id.button_past_hw);
+        btn_hw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openScheduleActivity();
             }
         });
 
-        btn_metronome = (Button) findViewById(R.id.button11);
+        btn_metronome = (Button) findViewById(R.id.button_metronome);
         btn_metronome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +106,7 @@ List of Homepage Buttons
             }
         });
 
-        btn_tuner = (Button) findViewById(R.id.button12);
+        btn_tuner = (Button) findViewById(R.id.button_tuner);
         btn_tuner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,21 +114,30 @@ List of Homepage Buttons
             }
         });
 
-        btn_homework = (Button) findViewById(R.id.button13);
-        btn_homework.setOnClickListener(new View.OnClickListener() {
+        btn_hw = (Button) findViewById(R.id.button_past_hw);
+        btn_hw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeworkActivity();
             }
         });
 
-        btn_musicexercises = (Button) findViewById(R.id.button14);
-        btn_musicexercises.setOnClickListener(new View.OnClickListener() {
+        btn_student_scoreboard = (Button) findViewById(R.id.button_scoreboard);
+        btn_student_scoreboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMusicExercisesActivity();
+                openScoreBoardActivity();
             }
         });
+
+        btn_student_logout = (Button) findViewById(R.id.button_student_logout);
+        btn_student_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLoginActivity();
+            }
+        });
+
 
 
 
