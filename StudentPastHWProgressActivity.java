@@ -129,10 +129,6 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
                                 studentFinishedProgress = false;
                             }
 
-                           
-
-
-
                             //Displaying the homework text: pieces, scales, exercises
 
                             if(fullListPieces == ""){
@@ -158,8 +154,6 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
 
 
 
-                            //fullListScales = fullListScales + ", "+ scales;
-                            //fullListExercises = fullListExercises + ", "+ exercises;
 
                             Log.d("mytest", "aid "+aid+"pieces: "+pieces+" scales: "+ scales + " exercises: "+ exercises);
                             // display data to UI
@@ -240,29 +234,14 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*Log.d("mytest","start year" + start_date_year+", start month" + start_date_month+", start day"+ start_date_day+
-                        ", end year" + end_date_year+", end month="+end_date_month+", end day"+end_date_day);*/
+                
+                //Log Console Testing 
+                Log.d("mytest","start year" + start_date_year+", start month" + start_date_month+", start day"+ start_date_day+
+                        ", end year" + end_date_year+", end month="+end_date_month+", end day"+end_date_day);
 
-                //String full_start_date = ""+start_date_year+"-"+start_date_month+"-"+start_date_day;
-                //String full_end_date = ""+end_date_year+"-"+end_date_month+"-"+end_date_day;
-                //get_student_assignment(user_id, full_start_date, full_end_date);
-
-                Drawable true_icon = getResources().getDrawable(R.drawable.true_icon);
-                Drawable false_icon = getResources().getDrawable(R.drawable.false_icon);
-                displayPiecesProgress = (TextView) findViewById(R.id.textView_pieces_progress_student);
-                displayScalesProgress = (TextView) findViewById(R.id.textView_scales_progress_student);
-
-                displayExercisesProgress = (TextView) findViewById(R.id.textView_exercises_progress_student);
-
-
-                displayPiecesProgress.setText("Bruch Viola Suite, Mozart Viola Solo");
-                displayScalesProgress.setText("Eb major/minor, B major/minor");
-                displayExercisesProgress.setText("vibrato practice, bowing practice");
-                studentDisplayOverallProgressIcon.setImageDrawable(false_icon);
-
-
-
-
+                String full_start_date = ""+start_date_year+"-"+start_date_month+"-"+start_date_day;
+                String full_end_date = ""+end_date_year+"-"+end_date_month+"-"+end_date_day;
+                get_student_assignment(user_id, full_start_date, full_end_date);
             }
         });
 
