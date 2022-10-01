@@ -218,8 +218,8 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_past_hw_progress);
 
-        //user_id = readFromFile(StudentPastHWProgressActivity.this);
-        //user_id = user_id.trim();
+        user_id = readFromFile(StudentPastHWProgressActivity.this);
+        user_id = user_id.trim();
         Log.d("mytest","user_id="+user_id);
 
 
