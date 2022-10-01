@@ -107,9 +107,9 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
                         String fullListScales = "";
                         String fullListExercises = "";
 
-                        /*studentDisplayOverallProgressIcon = (ImageView) findViewById(R.id.imageView_student_past_hw_status);
+                        studentDisplayOverallProgressIcon = (ImageView) findViewById(R.id.imageView_student_past_hw_status);
                         Drawable true_icon = getResources().getDrawable(R.drawable.true_icon);
-                        Drawable false_icon = getResources().getDrawable(R.drawable.false_icon);*/
+                        Drawable false_icon = getResources().getDrawable(R.drawable.false_icon);
 
 
                         for(int i=0; i<user_homework_list.length; i++)
@@ -129,19 +129,11 @@ public class StudentPastHWProgressActivity extends AppCompatActivity {
                                 studentFinishedProgress = false;
                             }
 
-                            //Display the status of the homework
-                            /*if(studentFinishedProgress == false){
-                                studentDisplayOverallProgressIcon.setImageDrawable(false_icon);
-                            }
-                            else{
-                                studentDisplayOverallProgressIcon.setImageDrawable(true_icon);
-
-                            }*/
+                           
 
 
 
-
-                            //Displaying the homework
+                            //Displaying the homework text: pieces, scales, exercises
 
                             if(fullListPieces == ""){
                                 fullListPieces = pieces;
